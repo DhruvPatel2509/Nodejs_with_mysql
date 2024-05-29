@@ -1,6 +1,6 @@
 # Project Name
 
-User With multi Address
+User With Multi Addresses 
 
 
 ## Technologies Used
@@ -15,9 +15,4 @@ User With multi Address
 - Node.js and npm installed
 - MySQL installed and running
 
-## Installation
 
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/yourusername/your-repo-name.git
-   cd your-repo-name
