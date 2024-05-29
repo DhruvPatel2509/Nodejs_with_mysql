@@ -1,0 +1,81 @@
+/* UserPage.css */
+.main_container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.user-page-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: end;
+    width: 40%;
+}
+
+.addnew {
+    padding: 10px 15px;
+    background-color: darkmagenta;
+    color: white;
+}
+
+.user-details {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: flex;
+    width: 100%;
+}
+
+.user-details table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user-details th,
+.user-details td {
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+.user-details img {
+    border-radius: 50%;
+    border-radius: 50%;
+    max-width: 50%;
+    height: 80px;
+    border: 1px solid black;
+}
+
+.address_container {
+    width: 58%;
+
+}
+
+.address-table {
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+.address-table th,
+.address-table td {
+
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+.button {
+    padding: 0 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 5px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+}
+
+.userregister {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  border: 1px solid black;
+  padding: 25px;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  padding: 5px 10px;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+
+.userImg {
+  width: 400px;
+  height: 300px;
+}

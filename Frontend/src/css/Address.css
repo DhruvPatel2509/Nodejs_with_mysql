@@ -1,0 +1,45 @@
+/* src/AddressForm.css */
+
+.address-form-container {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.address-form-container .address-form {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+}
+
+.address-form-container .address-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.address-form-container .address-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.address-form-container .address-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.address-form-container .address-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.address-form-container .address-form button:hover {
+    background-color: #0056b3;
+}
