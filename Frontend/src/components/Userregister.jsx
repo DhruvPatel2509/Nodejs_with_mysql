@@ -49,7 +49,7 @@ function Userregister() {
       );
       // Log the response data and navigate to user page
       console.log(response.data.userId);
-      navigate(`/user`);
+      navigate(`/`);
     } catch (error) {
       // Handle errors if any
       console.error("Error submitting form:", error);

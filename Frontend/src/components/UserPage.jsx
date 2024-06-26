@@ -77,7 +77,7 @@ function UserPage() {
       ) : (
         <div className="user-page-container">
           {/* Button to add a new user */}
-          <Link to="/">
+          <Link to="/user">
             <button className="addnew">Add New</button>
           </Link>
           {/* Display user details */}
