@@ -4,11 +4,12 @@ import App from "./App.jsx";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import AppContexProvider from "../Contex/AppContex.jsx";
-
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <AppContexProvider>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </AppContexProvider>
+  <>
+    <AppContexProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </AppContexProvider>
+  </>
 );
