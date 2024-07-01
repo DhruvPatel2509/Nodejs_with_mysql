@@ -25,6 +25,7 @@ function UserPage() {
     try {
       const res = await axios.get(`http://localhost:3001/api/users/`);
       setuserData(res.data);
+      
     } catch (error) {
       console.error("Error fetching user data:", error);
     }
@@ -32,6 +33,7 @@ function UserPage() {
 
   // Fetch addresses of a user
   const fetchAddresses = async (userId) => {
+  
     setMainId(userId);
 
     try {
@@ -40,6 +42,7 @@ function UserPage() {
       );
       if (response.data.success) {
         setUserAddressData(response.data.results);
+        console.log(response.data.results);
       } else {
         setUserAddressData(null);
       }
@@ -82,7 +85,7 @@ function UserPage() {
           </Link>
           {/* Display user details */}
           {userData.map((user) => (
-            <div className="user-details" key={user.id}>
+            <div className="user-details" key={user.userId}>
               <table>
                 <thead>
                   <tr>
@@ -94,7 +97,7 @@ function UserPage() {
                 </thead>
                 <tbody>
                   <tr>
-                    <td>{user.id}</td>
+                    <td>{user.userId}</td>
                     <td>
                       <img
                         src={`http://localhost:3001/uploads/${user.image}`}
@@ -111,14 +114,14 @@ function UserPage() {
               {/* Buttons for actions */}
               <button
                 className="button"
-                onClick={() => fetchAddresses(user.id)}
+                onClick={() => fetchAddresses(user.userId)}
               >
                 Address
               </button>
-              <button className="button" onClick={() => updateUser(user.id)}>
+              <button className="button" onClick={() => updateUser(user.userId)}>
                 Update
               </button>
-              <button className="button" onClick={() => deleteUser(user.id)}>
+              <button className="button" onClick={() => deleteUser(user.userId)}>
                 Delete
               </button>
             </div>

@@ -4,7 +4,6 @@ import "../css/Address.css";
 import axios from "axios";
 function Address({ fetchAddresses, setShowAddAddress, changeData }) {
   const { mainId } = useContext(AppContext);
-
   const [formData, setFormData] = useState({
     userId: "",
     houseNo: "",
@@ -14,7 +13,8 @@ function Address({ fetchAddresses, setShowAddAddress, changeData }) {
     landmark: "",
     countryName: "",
   });
-
+  console.log(mainId);
+  
   formData.userId = mainId;
   useEffect(() => {
     if (changeData) {

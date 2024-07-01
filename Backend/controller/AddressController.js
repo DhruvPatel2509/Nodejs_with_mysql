@@ -38,6 +38,7 @@ exports.createAddress = (req, res) => {
 
 exports.getAddressById = (req, res) => {
   const uid = req.params.userId;
+  console.log(uid);
   db.query(
     "SELECT * FROM addresses WHERE userId = ?",
     [uid],
@@ -106,7 +107,7 @@ exports.updateAddress = (req, res) => {
 
 exports.deleteAddress = (req, res) => {
   const addressId = req.params.addressId;
-  db.query("DELETE FROM addresses WHERE id = ?", [addressId], (err, result) => {
+  db.query("DELETE FROM addresses WHERE addressid = ?", [addressId], (err, result) => {
     if (err) {
       console.error(err);
       return res

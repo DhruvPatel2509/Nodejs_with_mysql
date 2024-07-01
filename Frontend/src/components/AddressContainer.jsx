@@ -18,6 +18,7 @@ function AddressContainer({ userAddressData, fetchAddresses }) {
 
   // Function to handle deleting an address
   const deleteAddress = async (addressId) => {
+    console.log(addressId);
     try {
       const res = await axios.delete(
         `http://localhost:3001/api/addresses/${addressId}`
@@ -50,7 +51,7 @@ function AddressContainer({ userAddressData, fetchAddresses }) {
             {userAddressData.map((user) => (
               <React.Fragment key={user.id}>
                 <tr>
-                  <td>{user.id}</td>
+                  <td>{user.userId}</td>
                   <td>{user.houseNo}</td>
                   <td>{user.streetName}</td>
                   <td>{user.landmark}</td>
@@ -58,14 +59,14 @@ function AddressContainer({ userAddressData, fetchAddresses }) {
                   <td>{user.stateName}</td>
                   <td>{user.countryName}</td>
                   <td>
-                    <button className="btn" onClick={() => updateAddress(user)}>
+                    <button className="btn" onClick={() => updateAddress(user.addressId)}>
                       Update
                     </button>
                   </td>
                   <td>
                     <button
                       className="btn"
-                      onClick={() => deleteAddress(user.id)}
+                      onClick={() => deleteAddress(user.addressId)}
                     >
                       Delete
                     </button>

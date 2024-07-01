@@ -6,6 +6,7 @@ import { AppContext } from "../../Contex/AppContex";
 function Userregister() {
   // State variables for form data and image
   const [image, setImage] = useState(null);
+  
   const [formData, setFormData] = useState({
     username: "",
     firstname: "",
@@ -49,6 +50,7 @@ function Userregister() {
       );
       // Log the response data and navigate to user page
       console.log(response.data.userId);
+      
       navigate(`/`);
     } catch (error) {
       // Handle errors if any
